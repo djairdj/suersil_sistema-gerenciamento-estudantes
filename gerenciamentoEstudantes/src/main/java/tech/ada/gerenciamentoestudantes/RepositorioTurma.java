@@ -1,4 +1,4 @@
-package tech.ada.java.gerenciamento.estudantes.gerenciamentoestudantes;
+package tech.ada.gerenciamentoestudantes;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
