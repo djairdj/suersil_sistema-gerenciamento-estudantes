@@ -1,20 +1,19 @@
-package tech.ada.gerenciamentoestudantes;
+package tech.ada.gerenciamentoestudantes.domain;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "alunos")
-public class Estudante {
-
+public class Student {
+  //Matricula * Chave primária - auto-incrementado
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-  //Matricula * Chave primária - auto-incrementado
   private Long id;
-  private String nomeAluno;
+  private String nome;
   private String nomeResponsavel;
   private String dataNascimento;
   private String contatoResponsavel;
-
-  // Getters and setters
+  @ManyToOne
+  @JoinColumn(insertable = false, updatable = false)
+  private Class turma;
 }

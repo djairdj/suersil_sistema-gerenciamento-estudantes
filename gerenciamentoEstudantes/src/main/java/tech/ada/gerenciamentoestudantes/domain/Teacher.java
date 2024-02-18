@@ -1,17 +1,15 @@
-package tech.ada.gerenciamentoestudantes;
+package tech.ada.gerenciamentoestudantes.domain;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "professores")
 
-public class Professor {
+public class Teacher {
+  //Chave Primária
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-  //Chave Primária
   private Long id;
-  private String nomeProfessor;
+  private String nome;
   private String disciplinaLecionada;
-
 }
